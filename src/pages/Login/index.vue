@@ -72,7 +72,7 @@ export default {
           };
 
           const response = await api.post('/auth/login', formData);
-          console.log(response)
+
           if (response.status !== 200) {
             throw new Error('Erro ao fazer login');
           }
@@ -81,7 +81,7 @@ export default {
           localStorage.setItem('permissions', JSON.stringify(response.data.user.roles));
           localStorage.setItem('userData', JSON.stringify(response.data.user));
 
-          location.href='/dashboard';
+          this.$router.push('/dashboard');
 
         } catch (error) {
 
