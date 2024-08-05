@@ -15,7 +15,8 @@ const router = createRouter({
 })
 
 router.getRoutes().forEach((route) => {
-  if (route.name !== 'login') {
+  if (route.name !== '/Login/') {
+    console.log(route.name)
     route.meta.requiresAuth = true;
   }
 });
@@ -28,20 +29,17 @@ router.onError((err, to) => {
     }
   }
 })
-/*
 
 router.beforeEach((to, from, next) => {
   const isAuthenticated = !!localStorage.getItem('token');
 
   if (to.meta.requiresAuth && !isAuthenticated) {
-    console.log(' não ta logado')
     next('/login');
   } else {
-    console.log('aqui 2')
     next();
   }
 });
-*/
+
 router.isReady().then(() => {
   localStorage.removeItem('vuetify:dynamic-reload')
 })

@@ -98,7 +98,7 @@
     </v-col>
   </v-row>
 
-  <attach-doctor-dialog />
+  <attach-doctor-dialog v-if="verifyPermission('doctors')"/>
 
 </template>
 <script>

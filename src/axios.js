@@ -23,7 +23,7 @@ api.interceptors.request.use(config => {
 api.interceptors.response.use(response => {
   return response;
 }, error => {
-  /*if (error.response && error.response.status === 401
+  if (error.response && error.response.status === 401
       && !window.location.pathname.includes('/login')
   ) {
     Swal.fire({
@@ -56,7 +56,7 @@ api.interceptors.response.use(response => {
       text: error.response.data.message,
       confirmButtonText: 'OK',
     })
-  }*/
+  }
 
   return Promise.reject(error);
 });
