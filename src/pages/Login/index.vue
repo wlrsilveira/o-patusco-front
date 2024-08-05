@@ -81,10 +81,9 @@ export default {
           localStorage.setItem('permissions', JSON.stringify(response.data.user.roles));
           localStorage.setItem('userData', JSON.stringify(response.data.user));
 
-          this.$router.push('/dashboard');
+          location.href = '/!#/dashboard';
 
         } catch (error) {
-
           this.$swal.fire({
             title: "Login!",
             text: "Credenciais inválidas ou erro ao fazer login. Tente novamente..",

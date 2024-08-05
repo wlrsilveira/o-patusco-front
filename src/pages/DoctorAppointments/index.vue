@@ -139,7 +139,6 @@ export default {
     }),
 
     viewAppointment(item, readOnly = true) {
-      console.log(item)
       this.setAppointment(item);
       this.setReadOnly(readOnly);
       this.$router.push('/DoctorAppointments/update')

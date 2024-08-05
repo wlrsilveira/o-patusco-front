@@ -16,7 +16,6 @@ const router = createRouter({
 
 router.getRoutes().forEach((route) => {
   if (route.name !== '/Login/') {
-    console.log(route.name)
     route.meta.requiresAuth = true;
   }
 });

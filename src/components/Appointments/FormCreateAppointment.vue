@@ -187,7 +187,7 @@ export default {
               });
               this.$router.back();
             }
-            console.log(response);
+            
             this.$swal.fire({
               title: 'Inserção de Consulta',
               text: 'Erro ao inserir a consulta: ' + response.response.data.message,
